@@ -1,0 +1,3 @@
+Listing_ID,Name,Area,Bedrooms,Sleeps,Pool,Match_Score,Weight,Tier,Active,Airbnb_URL
+YOUR_LISTING_ID,Your Listing Name,Your Area,3,6,Heated,100,100,Self,Y,https://www.airbnb.com/rooms/YOUR_LISTING_ID
+45133712,Example SE Comp,Southeast,3,6,Heated,95,95,Core,Y,https://www.airbnb.com/rooms/45133712
