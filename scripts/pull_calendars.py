@@ -44,8 +44,8 @@ def main():
             print(f"Pulling {lid} ({comp.get('Name', '')})...")
             try:
                 data = pull_listing(lid)
-                # Adapt to actual AirROI response shape
-                calendar = data.get("calendar") or data.get("nights") or []
+                # Confirmed AirROI response shape: top-level "results" array with "rate"
+                calendar = data.get("results") or data.get("calendar") or []
                 for night in calendar:
                     rows.append({
                         "Snapshot_Date": snapshot_date,
@@ -56,7 +56,7 @@ def main():
                         "Available": "Y" if night.get("available") else "N",
                         "Nightly_Rate": night.get("rate") or night.get("price"),
                         "Min_Nights": night.get("min_nights"),
-                        "Currency": "USD",
+                        "Currency": data.get("currency", "USD"),
                         "Source": "AirROI live/calendar",
                     })
             except Exception as e:
