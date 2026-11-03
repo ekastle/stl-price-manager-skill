@@ -28,7 +28,7 @@ For Grok Bot / agents that support 1Password for Agents, connect the agent in th
 
 ## 3. Comps list and private data repo
 
-Create a **private** GitHub repo for operational data (e.g. `ekastle/turtlecreek-pricing`). Structure:
+Create a **private** GitHub repo for operational data (e.g. `your-username/str-pricing-data`). Structure:
 - `config/comps.csv` — real Listing_IDs, match scores, tiers. Always include your own listing with weight 100 / tier Self.
 - `snapshots/` — dated CSVs from pulls (committed by the bot).
 - `analysis/` — pricing tables and gap reports.
